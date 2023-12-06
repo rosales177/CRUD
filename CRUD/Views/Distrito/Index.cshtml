@@ -1,0 +1,14 @@
+@model IEnumerable<CRUD.Models.Data.Distrito>
+@{
+  
+}
+<select id="list-distrito" class="form-control" name="IdDistrito">
+  @if (Model.Count() > 0){
+    <option value="">Seleccione</option>
+    @foreach (var distrito in Model){
+      <option value="@distrito.IdDistrito">@distrito.NombreDistrito</option>
+    }
+  }else{
+    <option value="">Cargando...</option>
+  }
+</select>

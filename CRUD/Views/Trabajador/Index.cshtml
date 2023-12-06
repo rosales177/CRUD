@@ -1,0 +1,40 @@
+@model IEnumerable<CRUD.Models.TrabajadorDAO>
+@{
+  
+}
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Tipo Documento</th>
+      <th>Nro Documento</th>
+      <th>Nombres</th>
+      <th>Sexo</th>
+      <th>Departamento</th>
+      <th>Provincia</th>
+      <th>Distrito</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var trabajador in Model){
+      <tr data-id="@trabajador.Trabajador.IdTrabajador" style="background-color: @(trabajador.Trabajador.Sexo == "M" ? "#add8e6" : "#fdd0b7");">
+        <td>@trabajador.Trabajador.TipoDocumento</td>
+        <td>@trabajador.Trabajador.NroDocumento</td>
+        <td>@trabajador.Trabajador.Nombres</td>
+        <td>@trabajador.Trabajador.Sexo</td>
+        <td>@trabajador.Departamento.NombreDepartamento</td>
+        <td>@trabajador.Provincia.NombreProvincia</td>
+        <td>@trabajador.Distrito.NombreDistrito</td>
+        <td>
+          <div>
+            <button type="button" class="btn-edit btn btn-primary btn-sm">Editar</button>
+            <button type="button" class="btn-delete btn btn-danger btn-sm">Eliminar</button>
+          </div>
+        </td>
+      </tr>
+    }
+    @if (Model.Count() < 1) {
+      <td colspan="8"><p class="p-0 m-0 text-center">No se encontraron registros disponibles.</p></td>
+    }
+  </tbody>
+</table>

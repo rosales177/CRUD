@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="d-flex justify-content-center align-items-center w-100 vh-100">
+    <div>
+        <div class="alert alert-danger d-none" id="alert" role="alert">
+            <div class="d-flex align-items-center justify-content-end">
+                <button id="btn-close-alert" class="btn btn-sm btn-danger">x</button>
+            </div>
+            <div id="content-alert"></div>
+        </div>
+        <h2>Listo de Trabajadores</h2>
+        <div class="d-flex align-items-center justify-content-between pt-3 pb-3">
+            <button class="btn btn-primary" id="btn-add">Nuevo</button>
+            <div class="d-flex align-items-center">
+                <p class="p-0 m-0 pe-3">Filtrar Por:</p>
+                <label class="pe-1">Sexo</label>
+                <select class="form-control form-control-sm" style="width:150px" id="select-sexo">
+                    <option value="A" selected>Todos</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+        </div>
+        <div id="container-table"></div>
+    </div>
+</div>

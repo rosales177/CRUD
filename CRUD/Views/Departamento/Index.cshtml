@@ -1,0 +1,12 @@
+@model IEnumerable<CRUD.Models.Data.Departamento>
+@{
+  
+}
+
+
+<select id="list-departamento" class="form-control " style="width: 100%;" name="IdDepartamento">
+  <option value="">Seleccione</option>
+  @foreach (var departamento in Model){
+    <option value="@departamento.IdDepartamento">@departamento.NombreDepartamento</option>
+  }
+</select>

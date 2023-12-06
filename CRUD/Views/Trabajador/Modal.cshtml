@@ -1,0 +1,55 @@
+@{
+  
+}
+<h2 id="title-form" class="pt-1 pb-1">Creación de Trabajador</h2>
+<form id="form-trabajador" style="width: 500px;">
+  <input type="text" id="IdTrabajador" name="IdTrabajador" hidden/>
+  <div class="d-flex align-items-center pt-1 pb-1">
+    <label style="width: 50%;">Tipo Documento</label>
+    <select class="form-control" name="TipoDocumento">
+      <option value="DNI" selected>DNI</option>
+      <option value="RUC">RUC</option>
+    </select>
+  </div>
+  <div class="d-flex align-items-center pt-1 pb-1">
+    <label style="width: 50%;">Nro. Documento</label>
+    <input class="form-control" type="number" placeholder="00000000" name="NroDocumento" />
+  </div>
+  <div class="d-flex align-items-center pt-1 pb-1">
+    <label style="width: 50%;">Nombres</label>
+    <input class="form-control" type="text" placeholder="Juan Alberto Quintana Barrios" name="Nombres"/>
+  </div>
+  <div class="d-flex align-items-center pt-1 pb-1">
+    <label style="width: 33%;">Sexo</label>
+    <div class="d-flex ">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="Sexo" id="flexRadioDefault1" value="M">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Masculino
+        </label>
+      </div>
+      <div class="form-check ms-2">
+        <input class="form-check-input" type="radio" name="Sexo" id="flexRadioDefault1" value="F" checked>
+        <label class="form-check-label" for="flexRadioDefault1">
+          Femenino
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex align-items-center pt-1 pb-1">
+    <label style="width: 33%;">Departamento</label>
+    <div id="select-departamento" style="width: 67%;"></div>
+  </div>
+  <div class="d-flex align-items-center pt-1 pb-1">
+    <label style="width: 33%;">Provincia</label>
+    <div id="select-provincia" style="width: 67%;"></div>
+  </div>
+  <div class="d-flex align-items-center pt-1 pb-1">
+    <label style="width: 33%;">Distrito</label>
+    <div id="select-distrito" style="width: 67%;"></div>
+  </div>
+  <div class=" pt-2 pb-2">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" id="btn-reset" class="btn btn-secondary">Cancelar</button>
+  </div>
+</form>

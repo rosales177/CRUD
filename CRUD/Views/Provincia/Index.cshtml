@@ -1,0 +1,15 @@
+@model IEnumerable<CRUD.Models.Data.Provincia>
+@{
+  
+}
+
+<select id="list-provincia" class="form-control" name="IdProvincia">
+  @if (@Model.Count() > 0){
+    <option value="">Seleccione</option>
+    @foreach (var provincia in Model){
+      <option value="@provincia.IdProvincia">@provincia.NombreProvincia</option>
+    }
+  }else{
+    <option value="">Cargando...</option>
+  }
+</select>
